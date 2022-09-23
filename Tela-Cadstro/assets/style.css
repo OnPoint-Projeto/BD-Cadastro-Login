@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap'); /*fonte do google fonts*/
+
+body{
+    background-image: radial-gradient(circle, #8c52ff, #945efe, #9b6afc, #a275fb, #a980f9)!important;
+    font-family: 'Inder'!important;
+    color: white!important;
+}
+
+/*LOGO E DESC*/
+.wrapper{
+    margin-top: 250px;
+}
+.wrapper .logo{
+    margin-top: -100px; /*deixa a logo levemente acima do form responsivamente*/
+    font-size: 23px;
+}
+.wrapper .logo img{
+    clip-path: circle(); /*logo circular responsiva*/
+}
+/*BOX*/
+.wrapper .box-cadastro{
+ text-align: center;
+}
+
+/*BOTÃO e LINK*/
+.box-cadastro form button{
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid rgba(104, 85, 224, 1);
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 30px 10px;
+    width: 200px;
+    padding: 10px 0;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+    transition: 0.4s;
+    color: rgb(104, 85, 224);
+    background-color: rgba(255, 255, 255, 1);
+}
+.box-cadastro form button:hover{
+    color: white;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
+}
+
+.box-cadastro form a{
+    color: aquamarine;
+}
