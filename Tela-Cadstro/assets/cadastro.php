@@ -1,7 +1,7 @@
 <?php
 try{
     session_start();
-    $con = mysqli_connect("localhost","root","","bd_onpoint") or die ("erro de conechao");
+    $con = mysqli_connect("localhost","root","","bd_onpoint") or die ("erro de conexao");
     
     $nome = mysqli_real_escape_string($con, $_POST["nome"]);
     $email = mysqli_real_escape_string($con, $_POST['email']);
@@ -15,25 +15,28 @@ try{
         
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                echo "email ja existente";
+                echo "<script type='text/javascript'>alert('Email Já Existente!');";
+                echo "javascript:window.location='../index.html';</script>";
               }
             } else {
                 $query_insert = "INSERT INTO USUARIO VALUES(NULL,'$nome','$email','$senha')";
                 $query_run = mysqli_query($con, $query_insert);
                 if($query_run)
                 {
-                    echo "cadastro realizado";
+                    header("Location: ../../Tela-Login/index.html");
                 } 
                 else
                 {
-                    echo "falha ao cadastrar";
+                    echo "<script type='text/javascript'>alert('Falha no cadastro!');";
+                    echo "javascript:window.location='../index.html';</script>";
                 }
             }
     
         $con->close();
     }
     else{
-        echo "senha diferente da confirmação";
+        echo "<script type='text/javascript'>alert('Senha diferente da Confirmação!');";
+        echo "javascript:window.location='../index.html';</script>";
     }
     
  
