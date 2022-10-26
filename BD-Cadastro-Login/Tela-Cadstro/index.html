@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/logopit.jpg">
+    <title>OnPoint - Cadastre-se</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- BOOTSTRAP5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+        <div class="container wrapper">
+            <div class="logo float-start"> <!--float do bootstrap evita problemas na responsividade-->
+                <img src="./img/logopit.jpg" alt="logo" class="img-fluid">
+                <figcaption>OnPoint é a mais nova Rede Social do mundo da Moda!</figcaption>
+                <p>Preencha as informações e cadastre-se já!</p>
+                <br style="clear: both"><!--para ajustar a tela em relação ao float-->
+            </div>
+
+            <div class="box-cadastro">
+                <form class="float-end" method="post" action="assets/cadastro.php">
+                    <h2>PREENCHA AS INFORMAÇÕES DE CADASTRO:</h2> <br>
+                <!-- INPUTS -->
+                <div class="input-group mb-3">
+                    <label for="nome"></label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome de Usuario" required>
+                  </div>
+                
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" id="confSenha" name="confSenha" placeholder="Confirmar Senha" required>
+                </div>
+
+                    <button type="submit" name="btnCad" id="btnCad">CADASTRAR</button>
+                    <a href="../Tela-Login/index.html">Já Tenho Uma conta</a>
+                </form>
+            </div>
+        </div>
+
+        
+    
+    <script type="text/javascript" src="./assets/js-cadastro.js"></script>    
+    <!-- BOOTSRAP5 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

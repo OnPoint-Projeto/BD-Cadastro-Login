@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');/*FONTE 'INDER' EXPORTADA DO GOOGLE FONTS*/
+
+body{
+    font-family: 'Inder', sans-serif !important;
+    background-color: #8c52ff !important;
+}
+
+
+/*BOX DE LOGIN*/
+.box-login{
+    margin: 100px  auto;
+    padding: 25px; 
+    text-align: center;
+    border:0.5px solid #333; /*LEVE MARGEM*/
+    background-image: linear-gradient(to right bottom, #8c52ff, #945bff, #9c63ff, #846cff, #8b74ff); /*GRADIENTE*/
+    border-radius: 7px; /*ARREDONDA OS CANTOS*/
+    justify-content: center;
+    /*EFEITO DE SOMBRA*/
+    box-shadow: 0px 0px 25px 9px rgba(0,0,0,0.4);
+}
+ 
+    /*logo*/
+.box-login .logo figcaption{
+        font-size: 35px;
+        color: white;
+}
+.rounded{
+    clip-path: circle(); /*adiciona um codigo a uma propriadeade do bootstrap, deixa a img circular e responiva*/
+    width: 300px;
+}
+
+    /*form: https://itnext.io/how-to-build-a-floating-label-input-field-f9b21669fe2f*/
+.box-login form .float{
+    text-align: center;
+    padding: 0 12px;
+    position: relative;
+}
+label{
+    position: absolute;
+    font-size: 20px;
+    transform: translate(0, 18px) scale(1); /*posicao inicial dos eixos*/
+    transition: all .1s ease-in-out;
+}
+.float.active label{
+    transform: translate(0, 1px) scale(.75); /*posição dos eixos com a classe active*/
+}
+.box-login form .float input{
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 20px 0 14px;
+    outline: 0;
+}
+    
+    /*Botao*/
+.box-login form button{
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid rgba(104, 85, 224, 1);
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 30px 10px;
+    width: 200px;
+    padding: 10px 0;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+    transition: 0.4s;
+    color: rgb(104, 85, 224);
+    background-color: rgba(255, 255, 255, 1);
+}
+.box-login form button:hover{
+    color: white;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
+}
